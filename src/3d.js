@@ -64,7 +64,7 @@ export function ThreeDCardDemo() {
               className="w-full h-full object-cover rounded-xl group-hover/card:shadow-xl transition-all duration-50 ease-in-out"
             />
           </CardItem>
-          <CardItem className="pt-[3%] text-center text-xs md:text-base">CA: updating...</CardItem>
+          <CardItem className="pt-[3%] text-center text-xs md:text-base">CA: 9Dkjn1fMAWGDJwzevSzDQSLWQgRqJuv5gjut4JpBpump</CardItem>
         </div>
       </CardBody>
     </CardContainer>
