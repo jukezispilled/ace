@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useRef } from 'react';
+import Marquee from "react-fast-marquee";
+import { ThreeDCardDemo } from './3d';
 
 function App() {
+  const videoRef = useRef(null);
+  const [muted, setMuted] = useState(true);
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = !video.muted;
+      setMuted(video.muted);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen w-screen flex justify-center items-center overflow-clip bg-zinc-950">
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted={muted}
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ pointerEvents: 'none' }} // Prevent the video from capturing pointer events
+      >
+        <source src={`${process.env.PUBLIC_URL}/vid.mp4`} type="video/mp4" />
+      </video>
+      <ThreeDCardDemo />
     </div>
   );
 }
