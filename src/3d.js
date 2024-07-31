@@ -52,9 +52,9 @@ export function ThreeDCardDemo() {
           <CardItem
             as="p"
             translateZ="60"
-            className="text-black text-base max-w-sm mt-2 dark:text-neutral-300"
+            className="text-black text-lg max-w-sm mt-2 dark:text-neutral-300"
           >
-            it's all about the hype when it comes down to it
+            it's all about the hype
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4 overflow-hidden rounded-xl">
             <img
