@@ -39,7 +39,7 @@ function App() {
         </a>
       </div>
 
-      <div className='absolute top-5 text-white text-[9px] md:text-lg'>CA: XXXXXXXXXXXXXXXXXXXX</div>
+      <div className='absolute top-5 text-white text-[9px] md:text-lg'>CA: 6p5Wimg7UyhkFtkWaKzy4NZSy6EFn2q6TR1J6vBUpump</div>
       
       <div className='relative w-[60%] md:w-[25%] aspect-[2.5/3.5] perspective-1000 md:hover:scale-105 transition ease-in-out duration-150 -mt-[5%]'>
         {dealedCards.map((card, index) => (
