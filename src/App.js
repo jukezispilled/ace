@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import backgroundImage from './bg.jpg';
 
 function App() {
   const [dealedCards, setDealedCards] = useState([]);
@@ -17,7 +18,14 @@ function App() {
   }, []);
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center overflow-hidden bg-zinc-950">
+    <div className="h-screen w-screen flex justify-center items-center overflow-hidden bg-zinc-950"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+      }}
+    >
       <div className='absolute bottom-4 right-4 flex space-x-1 items-center z-[50]'>
         <a href="https://x.com/" className='transition ease-in-out duration-150'>
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" className='w-10 h-10 md:w-12 md:h-12 md:hover:scale-105 transition ease-in-out duration-150 cursor-pointer' fill="#FFFFFF" viewBox="0 0 50 50">
@@ -66,7 +74,7 @@ function App() {
 
       {showPayout && (
         <motion.div 
-          className='absolute bottom-[20%] text-amber-400 text-3xl font-bold'
+          className='absolute bottom-[20%] text-[#FFD700] text-3xl md:text-4xl font-bold'
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
