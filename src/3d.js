@@ -10,24 +10,6 @@ export function ThreeDCardDemo() {
     const image = imageRef.current;
     if (!image) return;
 
-    const applyGlitch = () => {
-      const blurAmount = Math.random() * 5;
-      const offsetX = (Math.random() - 0.5) * 10;
-      const offsetY = (Math.random() - 0.5) * 10;
-
-      image.style.filter = `blur(${blurAmount}px)`;
-      image.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-
-      setTimeout(() => {
-        image.style.filter = 'none';
-        image.style.transform = 'none';
-      }, 50 + Math.random() * 100);
-
-      setTimeout(applyGlitch, 100 + Math.random() * 200);
-    };
-
-    applyGlitch();
-
     return () => {
       image.style.filter = 'none';
       image.style.transform = 'none';
